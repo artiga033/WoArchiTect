@@ -1,0 +1,22 @@
+[package]
+name = "WoArchiTect"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+comfy-table = "7.1.4"
+object = "0.37.1"
+palc = "0.0.1"
+snafu = "0.8.6"
+strum = { version = "0.27.1", features = ["derive"] }
+windows = { version = "0.61.3", features = [
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_SystemInformation",
+    "Win32_System_Threading",
+] }
+
+[workspace]
+members = ["build_tools"]
+# the testbin crate has independent build profiles (panic="abort" as it's no_std)
+# so it can't be our member.
+exclude = ["testbin"]
