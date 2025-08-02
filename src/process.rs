@@ -1,4 +1,3 @@
-
 use snafu::{ResultExt, Snafu};
 use windows::Win32::{
     Foundation::{ERROR_NO_MORE_FILES, HANDLE, WIN32_ERROR},
@@ -7,7 +6,6 @@ use windows::Win32::{
         TH32CS_SNAPPROCESS,
     },
 };
-
 
 pub struct Process {
     pub pid: u32,

@@ -81,7 +81,10 @@ mod tests {
         let executables = enumrate_executables().unwrap();
         for exe_path in executables {
             println!("{exe_path:?}");
-            assert!(exe_path.exists(), "Executable path does not exist: {exe_path:?}");
+            assert!(
+                exe_path.exists(),
+                "Executable path does not exist: {exe_path:?}"
+            );
         }
     }
 }
